@@ -3,10 +3,10 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-<meta name="theme-color" content="#565656">
+<meta name="theme-color" content="#090909">
 <title>Nina Klishevich</title>
 <style>
-@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500;1,600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&display=swap');
 
 *, *::before, *::after {
   box-sizing: border-box;
@@ -14,82 +14,104 @@
   padding: 0;
 }
 
-html { background: #565656; }
+html { background: #090909; }
 
 body {
   min-height: 100vh;
-  background: #565656;
+  background: #090909;
   display: flex;
+  align-items: flex-start;
   justify-content: center;
   font-family: 'Cormorant Garamond', Georgia, serif;
   -webkit-font-smoothing: antialiased;
-  text-rendering: optimizeLegibility;
 }
 
 .card {
   width: 100%;
   max-width: 420px;
   min-height: 100vh;
-  border-left: 2px solid #C9A96E;
-  padding: 64px 44px 60px 44px;
+  padding: 72px 44px 60px 44px;
   display: flex;
   flex-direction: column;
+  align-items: center;
 }
 
-/* Header */
-.header {
-  padding-bottom: 38px;
-  border-bottom: 1px solid rgba(201, 169, 110, 0.14);
-  margin-bottom: 38px;
+/* Hero */
+.initials {
+  font-size: 96px;
+  font-weight: 300;
+  letter-spacing: 0.14em;
+  color: #ffffff;
+  line-height: 1;
+  margin-bottom: 22px;
+}
+
+.gold-rule {
+  width: 44px;
+  height: 1px;
+  background: #C9A96E;
+  margin-bottom: 26px;
 }
 
 .name {
-  font-size: 46px;
-  font-weight: 500;
-  letter-spacing: -0.01em;
-  line-height: 1.04;
-  color: #FFFFFF;
-  margin-bottom: 18px;
-}
-
-.title {
-  font-size: 16px;
-  font-weight: 300;
-  font-style: italic;
-  color: #C9A96E;
-  letter-spacing: 0.04em;
-  line-height: 1.4;
+  font-size: 22px;
+  font-weight: 400;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: #ffffff;
+  text-align: center;
+  line-height: 1.2;
   margin-bottom: 12px;
 }
 
-.tagline {
-  font-size: 13px;
+.title {
+  font-size: 15px;
   font-weight: 300;
-  color: rgba(255, 255, 255, 0.88);
-  letter-spacing: 0.03em;
-  line-height: 1.7;
+  font-style: italic;
+  color: #C9A96E;
+  text-align: center;
+  letter-spacing: 0.04em;
+  line-height: 1.5;
+  margin-bottom: 10px;
+}
+
+.tagline {
+  font-size: 11px;
+  font-weight: 300;
+  color: rgba(201, 169, 110, 0.72);
+  text-align: center;
+  letter-spacing: 0.1em;
+  line-height: 1.8;
+}
+
+/* Divider */
+.rule {
+  width: 100%;
+  height: 1px;
+  background: rgba(255, 255, 255, 0.07);
+  margin: 40px 0;
 }
 
 /* Contacts */
 .contacts {
+  width: 100%;
   display: flex;
   flex-direction: column;
   gap: 22px;
-  margin-bottom: 40px;
 }
 
 .contact-link {
   display: flex;
   align-items: center;
-  gap: 15px;
+  gap: 16px;
   text-decoration: none;
-  color: rgba(255, 255, 255, 0.90);
-  font-size: 14px;
+  color: rgba(255, 255, 255, 0.55);
+  font-size: 13.5px;
   font-weight: 300;
   letter-spacing: 0.03em;
-  line-height: 1.3;
   font-family: 'Cormorant Garamond', Georgia, serif;
   transition: color 0.22s ease;
+  line-height: 1.3;
 }
 
 .contact-link:hover,
@@ -99,83 +121,69 @@ body {
   width: 17px;
   height: 17px;
   flex-shrink: 0;
-  color: rgba(201, 169, 110, 0.95);
-  transition: color 0.22s ease;
+  color: #ffffff;
+  opacity: 0.5;
+  transition: opacity 0.22s ease;
 }
 
 .contact-link:hover .icon,
-.contact-link:active .icon { color: #C9A96E; }
+.contact-link:active .icon { opacity: 1; }
 
 /* QR */
 .qr-section {
+  margin-top: 44px;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   align-items: center;
-  gap: 22px;
-  padding: 26px 0;
-  border-top: 1px solid rgba(201, 169, 110, 0.12);
-  border-bottom: 1px solid rgba(201, 169, 110, 0.12);
-  margin-bottom: 28px;
+  gap: 14px;
+  width: 100%;
 }
 
 .qr-wrap {
-  background: #EDE6D6;
-  padding: 9px;
+  background: #ffffff;
+  padding: 10px;
+  display: inline-block;
   line-height: 0;
-  flex-shrink: 0;
 }
 
 .qr-wrap img {
   display: block;
-  width: 86px;
-  height: 86px;
-}
-
-.qr-text {
-  display: flex;
-  flex-direction: column;
-  gap: 7px;
+  width: 96px;
+  height: 96px;
 }
 
 .qr-label {
-  font-size: 10px;
-  font-weight: 400;
-  letter-spacing: 0.26em;
-  text-transform: uppercase;
-  color: #C9A96E;
-}
-
-.qr-desc {
-  font-size: 14px;
+  font-size: 9px;
   font-weight: 300;
-  font-style: italic;
-  color: rgba(255, 255, 255, 0.82);
-  line-height: 1.4;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.26);
 }
 
 /* Save */
 .save-btn {
-  display: block;
+  margin-top: 36px;
   width: 100%;
   padding: 15px 24px;
   background: transparent;
-  border: 1px solid rgba(201, 169, 110, 0.42);
+  border: 1px solid rgba(201, 169, 110, 0.5);
   color: #C9A96E;
   font-family: 'Cormorant Garamond', Georgia, serif;
-  font-size: 11.5px;
+  font-size: 11px;
   font-weight: 400;
-  letter-spacing: 0.26em;
+  letter-spacing: 0.28em;
   text-transform: uppercase;
-  text-align: center;
-  text-decoration: none;
   cursor: pointer;
   transition: all 0.22s ease;
+  text-align: center;
+  text-decoration: none;
+  display: block;
 }
 
 .save-btn:hover,
 .save-btn:active {
   background: #C9A96E;
-  color: #565656;
+  color: #090909;
   border-color: #C9A96E;
 }
 </style>
@@ -183,11 +191,13 @@ body {
 <body>
 <div class="card">
 
-  <div class="header">
-    <h1 class="name">Nina<br>Klishevich</h1>
-    <div class="title">Executive Advisor</div>
-    <div class="tagline">AI enabled strategy, growth &amp; transformation<br>BCG and INSEAD alumna</div>
-  </div>
+  <div class="initials">NK</div>
+  <div class="gold-rule"></div>
+  <div class="name">Nina Klishevich</div>
+  <div class="title">Executive Advisor</div>
+  <div class="tagline">AI enabled strategy, growth &amp; transformation<br>BCG and INSEAD alumna</div>
+
+  <div class="rule"></div>
 
   <div class="contacts">
     <a href="mailto:nina.klishevich@gmail.com" class="contact-link">
@@ -215,12 +225,9 @@ body {
 
   <div class="qr-section">
     <div class="qr-wrap">
-      <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAlgAAAJYAQMAAACEqAqfAAAABlBMVEXt5tYAAACrFmWpAAAACXBIWXMAAA7EAAAOxAGVKw4bAAADYElEQVR4nO3dMW7zMAyGYQIdPOYIPoqvrqPoCBm9qZFJipRb/P0npSheAlaUpHra6QNlGagI9Sfqo+U6ZXtdj/Z8XS2NVfbXrI96iRytvK5cBQsLC+s/rHPkz3ZZUWpp9fW7jbpSPa8DCwsL6w2Wrj+H9Xx99zBNrnnOQjGvpDwsWFhYWG+3eiJGD+czT8CoIoKFhYX166zWIg9V7NI9D7GwsLDeb3lt5j1McK3Xfq1xaR/rJblYWFhYa61csxWXGvmKHPTCwsLCWmvd626JRC8nqZs7vlmLhYWFtdraUg5ulmxxHtAuKyehusdIwJhhYWFhrbM+LkXF09zcxcVJQBWt3aQicTdN/yYsLCysnyw3RDzHPLue9unjcvbrm2runFvH+AQLCwtrrdWs7zrH6tx9ZaOOLkxTsNgKn2FhYWGttNQ7JZ8/esX9r2pWZOExxja5WFhYWGusfP7oT4Dlip7OU1DNYwg664WFhYW11vLV3s1ttjrfS1NJvs1DlTQLsbCwsNZZ2TiHqRWml4vV1h6ThIWFhbXaOm9m7EFjV1qHtds7dbyba5aFWFhYWKssfRZjS5crIT1TBvroWRijYGFhYS238rOrffSTzPuzZJ6C+t6Vw35jwcLCwvrR6uWdl8/cCVOs8wrJ188JhoWFhbXOivNHzUKv5yT21XWIrkTpX4WFhYW11vJd43bTQmytWRK66XXfP2JhYWGts7RmLeegXp6A4ZZJ7FWwsLCwFlt9td9HU/f7579U0XkdRplmWFhYWOusj+GE5kKcP/r63T6p0060mYmFhYX1Lst3pY/xE5qDMqyovAud97VYWFhY66y8F9VeLvq4fBawt1zFOrhjzLCwsLDeYfWKfk7TMPq5OrRqsmqRgzkLsbCwsP5lbZMjkneQOlb73JWvVbCwsLAWW/fa7LvnMPtcjbkD09XHl0TEwsLCWmPd/0+ZC/P9+/2StHR+TDtHHbGwsLDWWt6/xf2v6OP8PpinYN6NlmvNnIVYWFhYay3t3+4nkM/RycklhHLv6Q57xcLCwnq39Wj+3ITnoQoyWd7LlbGrxcLCwvoNVqRhH+uk9Nejfe3msLCwsFZbXtuYexqGWIflbhmOYGFhYb3FynXK/TQzXDFDs1Csi4vCwsLCWmtRf6I+AQB5f6CIdclJAAAAAElFTkSuQmCC" alt="QR code linking to Nina Klishevich's LinkedIn profile">
+      <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAlgAAAJYAQMAAACEqAqfAAAABlBMVEX///8AAABVwtN+AAAACXBIWXMAAA7EAAAOxAGVKw4bAAADyUlEQVR4nO3dQW4iMRCFYY9YsOQIfZQ+Gn20PkofgSULRE3bVWWXW2EGRYrJ4n8SnQTCN1k92YVhUiLkJyMxj3Tab2e57zeRW7rYdUvT/l2+rmnebyldZdlvMVhYWFjvWM9aP6ditail2fbHp3Kdy8+Lea26sLCwsMZbf8qjj2rd97vPpuX0XZjMW0IfYmFhYX3eyo2oK7n7bvhqLhUrZkkJCwsL69dZItqHvhO91SaUuhdNWFhYWN+0PKdu/tW0nKk8ZzNpFl9/ebCwsLDGWzG9dbEm1P2j3mZrw9aDHiwsLKzB1iFHK4W1XAqrudiDr4KFhYX109Zxfp/jK7mcW21CPT8hdoIiJ4uxC7GwsLCGWftVd6Ntkna3Nuyn95v+w7YbvdYJfvubsLCwsP5r7e3lE7DYXTr/yrkUZyqPbElnX/6aoTq1v7CwsLAGW2KvQT7s2WfTWrIxla/9/GuxZ8SVHBYWFtYoS73ch+31R0+bf211PTeXR3R67zP8qGFhYWENsqTFT4DF6Aw/Rz2ff7l03NdiYWFh/duKu0c/554T518q6RpsTX2HqaT9hYWFhTXQsv2jz+/bFKy9y9DbMJUuTOHMw7WTsLCwsEZbz2q0VyBbF2q2as3SzjzkNvzqtQAsLCysAZbo9P5Zp186v9czp5pbXcnl62zSUq9xX4uFhYU10lLtYW14siaUsBedShtO1oK6F3XL2xILCwvrDSu1HaSvwbKjZ05T0DbrL59+ifj6KzQYFhYW1jir3t/eoyNmaRvGM/O+f2yze439UVhYWFhDrWd3YqtPm4Bt1oa+mtMc949YWFhYA62SXus/m9Q/p6Yl9+ESnq33YmFhYY22ju/5eXX+K2cr38/Wh1cRM7GwsLDetMx5plPVtL3iZ8ukNNn+UbN2u0f/q7CwsLA+ZbUzDxIUzWQ96Pn6zAMWFhbWWCvuH3Utd5av5veTxCy2lstS/hkLCwvrM1aOnwDzNvTzE+7k65ra+Qltw1CQWFhYWG9Yx/1j3EGqt9n9k7wKFhYW1nDrED/1oDN8bcKbGf0KbCm/oV2IhYWF9QFLYl7N76ciaWbR+f1it7h/xMLCwhpp+edstfmXSmfxE1utBTc7O5G9pTyn70IsLCyssVabpMVXIP1zHvp3LGbF3/ej8TrFwsLC+p4V/y8d7bBJfP3VLF9/hZ0oFhYW1i+wchv6mXmd36s3l99d7bxDAdoKDAsLC2uw5dF1XI634aWKW7XW1PaPV/OwsLCwPmHF+PwrJ67nPJM9tppzDc/FwsLCGmwR8nP5Cz/D72tlvC2xAAAAAElFTkSuQmCC" alt="QR code linking to Nina Klishevich's LinkedIn profile">
     </div>
-    <div class="qr-text">
-      <div class="qr-label">LinkedIn</div>
-      <div class="qr-desc">Scan to connect with me</div>
-    </div>
+    <div class="qr-label">Scan for LinkedIn</div>
   </div>
 
   <a class="save-btn" href="data:text/vcard;charset=utf-8,BEGIN%3AVCARD%0D%0AVERSION%3A3.0%0D%0AN%3AKlishevich%3BNina%3B%3B%3B%0D%0AFN%3ANina%20Klishevich%0D%0ATITLE%3AExecutive%20Advisor%0D%0AEMAIL%3BTYPE%3DINTERNET%3Anina.klishevich%40gmail.com%0D%0ATEL%3BTYPE%3DCELL%3A%2B971565251727%0D%0AURL%3Ahttps%3A//www.linkedin.com/in/nina-klishevich%0D%0AEND%3AVCARD" download="nina-klishevich.vcf">Save Contact</a>
