@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta name="theme-color" content="#090909">
+<title>Nina Klishevich</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&display=swap');
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html { background: #090909; }
+
+body {
+  min-height: 100vh;
+  background: #090909;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+.card {
+  width: 100%;
+  max-width: 420px;
+  min-height: 100vh;
+  padding: 72px 44px 60px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Hero */
+.initials {
+  font-size: 96px;
+  font-weight: 300;
+  letter-spacing: 0.14em;
+  color: #ffffff;
+  line-height: 1;
+  margin-bottom: 22px;
+}
+
+.gold-rule {
+  width: 44px;
+  height: 1px;
+  background: #C9A96E;
+  margin-bottom: 26px;
+}
+
+.name {
+  font-size: 22px;
+  font-weight: 400;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: #ffffff;
+  text-align: center;
+  line-height: 1.2;
+  margin-bottom: 12px;
+}
+
+.title {
+  font-size: 15px;
+  font-weight: 300;
+  font-style: italic;
+  color: #C9A96E;
+  text-align: center;
+  letter-spacing: 0.04em;
+  line-height: 1.5;
+  margin-bottom: 10px;
+}
+
+.tagline {
+  font-size: 11px;
+  font-weight: 300;
+  color: rgba(201, 169, 110, 0.72);
+  text-align: center;
+  letter-spacing: 0.1em;
+  line-height: 1.8;
+}
+
+/* Divider */
+.rule {
+  width: 100%;
+  height: 1px;
+  background: rgba(255, 255, 255, 0.07);
+  margin: 40px 0;
+}
+
+/* Contacts */
+.contacts {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+}
+
+.contact-link {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  text-decoration: none;
+  color: rgba(255, 255, 255, 0.55);
+  font-size: 13.5px;
+  font-weight: 300;
+  letter-spacing: 0.03em;
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  transition: color 0.22s ease;
+  line-height: 1.3;
+}
+
+.contact-link:hover,
+.contact-link:active { color: #C9A96E; }
+
+.icon {
+  width: 17px;
+  height: 17px;
+  flex-shrink: 0;
+  opacity: 0.5;
+  transition: opacity 0.22s ease;
+}
+
+.contact-link:hover .icon,
+.contact-link:active .icon { opacity: 1; }
+
+/* QR */
+.qr-section {
+  margin-top: 44px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 14px;
+  width: 100%;
+}
+
+#qr-wrap {
+  background: #ffffff;
+  padding: 10px;
+  display: inline-block;
+  line-height: 0;
+}
+
+#qr-wrap svg {
+  display: block;
+  width: 96px;
+  height: 96px;
+}
+
+.qr-label {
+  font-size: 9px;
+  font-weight: 300;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.26);
+}
+
+/* Save */
+.save-btn {
+  margin-top: 36px;
+  width: 100%;
+  padding: 15px 24px;
+  background: transparent;
+  border: 1px solid rgba(201, 169, 110, 0.5);
+  color: #C9A96E;
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: 11px;
+  font-weight: 400;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all 0.22s ease;
+  text-align: center;
+  text-decoration: none;
+  display: block;
+}
+
+.save-btn:hover,
+.save-btn:active {
+  background: #C9A96E;
+  color: #090909;
+  border-color: #C9A96E;
+}
+</style>
+</head>
+<body>
+<div class="card">
+
+  <div class="initials">NK</div>
+  <div class="gold-rule"></div>
+  <div class="name">Nina Klishevich</div>
+  <div class="title">Executive Advisor</div>
+  <div class="tagline">AI enabled strategy, growth &amp; transformation<br>BCG and INSEAD alumna</div>
+
+  <div class="rule"></div>
+
+  <div class="contacts">
+    <a href="mailto:nina.klishevich@gmail.com" class="contact-link">
+      <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+        <rect x="2" y="4" width="20" height="16" rx="2"/>
+        <path d="m2 7 8.9 5.7a2 2 0 0 0 2.2 0L22 7"/>
+      </svg>
+      nina.klishevich@gmail.com
+    </a>
+    <a href="tel:+971565251727" class="contact-link">
+      <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.59 1h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.54a16 16 0 0 0 6 6l.91-.91a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/>
+      </svg>
+      +971 56 525 1727
+    </a>
+    <a href="https://www.linkedin.com/in/nina-klishevich" target="_blank" rel="noopener" class="contact-link">
+      <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/>
+        <rect width="4" height="12" x="2" y="9"/>
+        <circle cx="4" cy="4" r="2"/>
+      </svg>
+      linkedin.com/in/nina-klishevich
+    </a>
+  </div>
+
+  <div class="qr-section">
+    <div id="qr-wrap"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAlgAAAJYAQMAAACEqAqfAAAABlBMVEX///8AAABVwtN+AAAACXBIWXMAAA7EAAAOxAGVKw4bAAADyUlEQVR4nO3dQW4iMRCFYY9YsOQIfZQ+Gn20PkofgSULRE3bVWWXW2EGRYrJ4n8SnQTCN1k92YVhUiLkJyMxj3Tab2e57zeRW7rYdUvT/l2+rmnebyldZdlvMVhYWFjvWM9aP6ditail2fbHp3Kdy8+Lea26sLCwsMZbf8qjj2rd97vPpuX0XZjMW0IfYmFhYX3eyo2oK7n7bvhqLhUrZkkJCwsL69dZItqHvhO91SaUuhdNWFhYWN+0PKdu/tW0nKk8ZzNpFl9/ebCwsLDGWzG9dbEm1P2j3mZrw9aDHiwsLKzB1iFHK4W1XAqrudiDr4KFhYX109Zxfp/jK7mcW21CPT8hdoIiJ4uxC7GwsLCGWftVd6Ntkna3Nuyn95v+w7YbvdYJfvubsLCwsP5r7e3lE7DYXTr/yrkUZyqPbElnX/6aoTq1v7CwsLAGW2KvQT7s2WfTWrIxla/9/GuxZ8SVHBYWFtYoS73ch+31R0+bf211PTeXR3R67zP8qGFhYWENsqTFT4DF6Aw/Rz2ff7l03NdiYWFh/duKu0c/554T518q6RpsTX2HqaT9hYWFhTXQsv2jz+/bFKy9y9DbMJUuTOHMw7WTsLCwsEZbz2q0VyBbF2q2as3SzjzkNvzqtQAsLCysAZbo9P5Zp186v9czp5pbXcnl62zSUq9xX4uFhYU10lLtYW14siaUsBedShtO1oK6F3XL2xILCwvrDSu1HaSvwbKjZ05T0DbrL59+ifj6KzQYFhYW1jir3t/eoyNmaRvGM/O+f2yze439UVhYWFhDrWd3YqtPm4Bt1oa+mtMc949YWFhYA62SXus/m9Q/p6Yl9+ESnq33YmFhYY22ju/5eXX+K2cr38/Wh1cRM7GwsLDetMx5plPVtL3iZ8ukNNn+UbN2u0f/q7CwsLA+ZbUzDxIUzWQ96Pn6zAMWFhbWWCvuH3Utd5av5veTxCy2lstS/hkLCwvrM1aOnwDzNvTzE+7k65ra+Qltw1CQWFhYWG9Yx/1j3EGqt9n9k7wKFhYW1nDrED/1oDN8bcKbGf0KbCm/oV2IhYWF9QFLYl7N76ciaWbR+f1it7h/xMLCwhpp+edstfmXSmfxE1utBTc7O5G9pTyn70IsLCyssVabpMVXIP1zHvp3LGbF3/ej8TrFwsLC+p4V/y8d7bBJfP3VLF9/hZ0oFhYW1i+wchv6mXmd36s3l99d7bxDAdoKDAsLC2uw5dF1XI634aWKW7XW1PaPV/OwsLCwPmHF+PwrJ67nPJM9tppzDc/FwsLCGmwR8nP5Cz/D72tlvC2xAAAAAElFTkSuQmCC" alt="LinkedIn QR code" style="display:block;width:96px;height:96px;"></div>
+    <div class="qr-label">Scan for LinkedIn</div>
+  </div>
+
+  <a class="save-btn" href="contact.vcf" download="nina-klishevich.vcf">Save Contact</a>
+
+</div>
+</body>
+</html>
